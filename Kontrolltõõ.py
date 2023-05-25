@@ -1,32 +1,57 @@
+from math import *
+from random import *
 
-def print_bunny(n):
-    bunny = " (\_/)\n (o.o)\n / | \*"
-    for i in range(n):
-        print(bunny)
-        if i < n-1:
-            print("")
-
-num = int(input("sisestage arv vahemikus 1 kuni 9:"))
-print_bunny(num)
-print()
-l = 14
-sum = 0
-
-for i in range(l+1):
-    sum += i
-
-print(sum)
+a=1
+b=1
+while a<=100:
+    b+=1
+    a+=b
+print("aastat", b,"kingitus", a)
 print()
 
-num = int(input("Sisestage number: "))
-sum = 0
-product = 1
 
-while num > 0:
-    digit = num % 10
-    sum += digit
-    product *= digit
-    num = num // 10
+a=randint(1,35)
+print("Õpilased:", a)
+b=0
+for i in range(a):
+    c=randint(1,5)
+    print("Hind",c,end=" ")
+    b=b+c
+print(f"keskmine hind on {b/a}")
+print()
 
-print("Numbrite summa:", sum)
-print("Numbrite korrutis:", product)
+
+n=int(input("Sisesta arv: "))
+a=int(input("Sisesta arvu aste: "))
+for i in range(1,n+1):
+   print(i**a)
+print()
+
+
+a=int(input("Sisesta arv 1 kuni 9:"))
+for i in range(a):
+    print("  -----  ") 
+    print("|  3 3  |") 
+    print("!  \-/  !") 
+    print("  _____  ") 
+print()
+
+
+print("Sisse arv (0-100). 10 katsega")
+r=randint(1,100)
+n=1
+while n<=10:
+    o=int(input("Sisesta arv: "))
+    if o==r:
+        print(f"sa kasutasid {n} katset.")
+        break
+    elif r>o:
+        print("Liiga väike")
+    elif o>r:
+        print("liiga suur")
+    n=n+1
+while True:
+        n<=10
+        print("Püüdlused lõppesid vastus oli",r)
+        break
+print()
